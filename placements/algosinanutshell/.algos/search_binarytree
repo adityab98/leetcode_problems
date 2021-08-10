@@ -1,0 +1,11 @@
+***** binary search tree *****
+context: memory leaks are serious problems. when program runs for extended periods, memory leaks will eventually cause the program to exceed the amount of memory allocated to its process and then crash. bsts perform well when insertions and deletions happen often. a perfectly balacned bst has 2^n - 1 nodes for n>=1 and a height of n-1. in worst case, tree may be degen and have same properties as a list.
+forces: if we simply need to locate a search item, first choice should be hash-based. (if data size is unknown, implementation must be able to handle any possible size. if there'll be lots of deletions and insertions. if the app requires traversing data in ascending or descending order.) if we need to be able to traverse in any order, nodes must include parent as well. if dynamic data, we must balance the tree. red-black tree - guarantees that no branch has height more than 2x any other (every node is red or black. root is black. leaf contains null val and is black. red nodes have 2 black children. every simple path from node to one of its descendant leaf nodes contains the same number of black nodes)
+consequences: require more code than simple binary trees.
+analysis: avg case same as binary saerch. new insertions and deletions also O(logn)
+best: O()
+avg: O(logn)
+worst: O()
+related:
+
+algo

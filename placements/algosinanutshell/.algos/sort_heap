@@ -1,0 +1,34 @@
+***** heap sort *****
+context: unstable. moves vals  constantly. shouldnt be used for value based data
+forces: avoids many nasty cases that causes quicksort to do bad. in avgcase however, quicksort is better
+analysis: heapify is the central op. its called (n/2 - 1) times and n-1 times during the actual sort. depth of heap will always be logn. Therefore performance is always tied to nlogn
+best: O(nlogn)
+avg: O(nlogn)
+worst: O(nlogn)
+related: heap, array, recursion, binary heap
+desc: heap is a binary tree which enforces: 
+	shape property: leaf node at depth k>0 caonly exist if all 2^(k-1) nodes at depth k-1 exist. nodes at partially filled level must be added l2r
+	heap property: each node contains value >= either of its 2 children, if any
+can store in array without losing structural info
+
+sort (A)
+	build_heap(A)
+	for i = n - 1 to 1
+		swap (A[0], A[i])
+		heapify (A, 0, i)
+
+built_heap (A)
+	for i = floor(n/2) -1 to 0
+		heapify(A, i, n)
+
+heapify (A, idx, max)
+	left = 2*idx + 1
+	right = 2*ixd + 2
+	if (left < max and A[left] > A[idx])
+		largest = left
+	else largest = idx
+	if (right < max and A[right] > A[largest])
+		largest = right
+	if (largest != idx)
+		swap (A[i], A[largest])
+		heapify (A, largest, max)

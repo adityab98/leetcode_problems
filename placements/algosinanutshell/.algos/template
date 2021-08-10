@@ -1,0 +1,11 @@
+***** template *****
+context:
+forces:
+consequences:
+analysis:
+best: O()
+avg: O()
+worst: O()
+related:
+
+algo

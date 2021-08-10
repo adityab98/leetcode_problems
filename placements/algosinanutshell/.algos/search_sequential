@@ -1,0 +1,16 @@
+***** sequential search *****
+context: without knowledge about collection, sequential search gets the job done in a brute-force manner. only algo usable if collection is accessible only thru an iterator that returns teh eles of the collection one at a time
+forces: might be the most effective, depending on n, the number of items inthe collection, and the number of times you will perform a search. if n is small or you wont be performing the search often, cost of using a complex data structure outweighs the benefits. If collection is an unsorted linked list, inserting an ele takes constant time, but frequent insertions into an array-based collection require dynamic array management, which is provided by the language or requires attention by programmer. time to find an ele is O(n) in both cases, and removing an ele takes at least O(n). sequential search also places the fewest restrictions on the type of eles you can search. the only restriction being that you need a cmp function to see if the ele matches the search query.
+consequences: for small collections of unordered eles, this is easy to implement and reasonably efficient. worst case is when item is not in ele. if the predominant result of a search will be false, you should consider a diff algo, even if collection is small. sometimes the collection might have holes in it, i.e, some indexes have no eles. in this case, you must add code to check each index, in order to ensure theres an ele there. if time is critical and collection is large, this adds a lot of computation time. a solution is to use a sentinel which always returns false. eg: if search query is +ve int, you can use -1 to avoid the extra comparison
+analysis: if item belongs in collection and is equally likely to be found at any of its indexed locations, seq search probes 1/2(n) + 1/2 times.
+variations: when target ele is not uniformly distributed, variations can be used. we want eles at the front of collection to be most sought after. move_to_front_on_success moves item t to the front of the collection if there is a chance it will be searched for again. move_up_on_success moves ele one position higher. move_to_end_on_success if ele unlikely to be searched multiple times
+best: O(1)
+avg: O(n)
+worst: O(n)
+related: array, brute force, 
+
+search (A, t)
+	for i = 1 to n do
+		if (A[i] == t)
+			return true
+	return false
