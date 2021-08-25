@@ -1,3 +1,7 @@
+/*
+ *
+ *A matrix of same rows and same columns is given .Santhiya wants to Sort the matrix in such manner that she will start from the first element and traverse the matrix in clockwise manner at the end she should be at the middle position with a largest element .Find the solution of Santhiya's problem. Input format First line will take the dimension of matrix i.e. N x N (only one input N). Second input the elements of matrix. Output format Sorted Matrix in clockwise manner. Sample testcases Input 3 2 5 12 22 45 55 1 6 8 Output 1 2 5 45 55 6 22 12 8
+ */
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
