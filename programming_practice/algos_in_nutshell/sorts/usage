@@ -1,0 +1,5 @@
+insertion sort: few items. items mostly sorted
+heap sort: concern about worst-case
+quicksort: good average-case
+bucket sort: items drawn from a dense Universe
+insertion sort: desire to write as little code as possible
